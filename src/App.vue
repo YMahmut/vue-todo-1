@@ -1,15 +1,15 @@
 <template>
     <div>
-        <Todo/>
+        <appBody/>
     </div>
 </template>
 
 <script>
-import ToDo from "@/components/Todo";
+import appBody from "@/components/Body";
 export default {
   name: 'App',
   components: {
-      Todo:ToDo,
+      appBody:appBody,
   }
 }
 </script>
