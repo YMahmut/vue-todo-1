@@ -1,12 +1,25 @@
 <template>
     <div id="header" class="m-2 p-2">
-        <h1>My Todo App</h1>
+        <Transition name="bounce">
+            <h1 v-if="!show">My Todo App</h1>
+        </Transition>
+
     </div>
 </template>
 
 <script>
 export default {
-    name: "appHeader"
+    name: "appHeader",
+    data(){
+        return{
+            show:true,
+            interval:null,
+        }
+    },
+    mounted(){
+        this.show=false;
+    },
+
 }
 </script>
 
@@ -15,5 +28,22 @@ export default {
     text-align: center;
     justify-content: center;
     align-items: center;
+}
+.bounce-enter-active {
+    animation: bounce-in 1s reverse;
+}
+.bounce-leave-active {
+    animation: bounce-out 1s;
+}
+@keyframes bounce-in {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.25);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 </style>

@@ -2,7 +2,7 @@
 <div>
     <div class="col">
         <div class="row">
-            <input class="new-todo m-3 p-3" type="text" v-model="doTo" @keypress.enter="addNewTodo" >
+            <input class="new-todo m-3 p-3" type="text" v-model="doTo" @keypress.enter="addNewTodo" placeholder="click and add new todo">
         </div>
         <div class="row">
             <button class="m-3 p-3 mx-5 px-5" @click="addNewTodo()">Add</button>
